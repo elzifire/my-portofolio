@@ -16,13 +16,13 @@
           class="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4 animate-fade-in-up"
           :class="isDark ? 'bg-primary-500/20 text-primary-400' : 'bg-primary-100 text-primary-700'"
         >
-          My Journey
+          {{ $t('education.tagline') }}
         </span>
         <h2 
           class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up delay-100"
           :class="isDark ? 'text-white' : 'text-gray-900'"
         >
-          Education <span class="gradient-text">History</span>
+          {{ $t('education.title') }} <span class="gradient-text">{{ $t('education.titleHighlight') }}</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
       </div>
@@ -154,6 +154,7 @@
 import { ref, inject, type Ref } from 'vue'
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
+const { t } = useI18n()
 
 interface Education {
   id: number

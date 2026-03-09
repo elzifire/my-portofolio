@@ -26,13 +26,13 @@
               : 'bg-primary-100 text-primary-700'
           "
         >
-          What I can do
+          {{ $t('skills.tagline') }}
         </span>
         <h2
           class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up delay-100"
           :class="isDark ? 'text-white' : 'text-gray-900'"
         >
-          My <span class="gradient-text">Skillset</span>
+          {{ $t('skills.title') }} <span class="gradient-text">{{ $t('skills.titleHighlight') }}</span>
         </h2>
         <div
           class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"
@@ -195,6 +195,7 @@
 import { ref, inject, computed, onMounted, onUnmounted, type Ref } from "vue";
 
 const isDark = inject<Ref<boolean>>("isDark", ref(false));
+const { t } = useI18n();
 const activeCategory = ref("all");
 const isVisible = ref(false);
 

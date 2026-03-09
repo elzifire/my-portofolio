@@ -36,7 +36,7 @@
               class="inline-block px-4 py-2 rounded-full text-sm font-medium mb-6"
               :class="isDark ? 'bg-primary-500/20 text-primary-400' : 'bg-primary-100 text-primary-700'"
             >
-              👋 Welcome to my portfolio
+              {{ $t('hero.welcome') }}
             </span>
           </div>
           
@@ -44,7 +44,7 @@
             class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up delay-100"
             :class="isDark ? 'text-white' : 'text-gray-900'"
           >
-            Hi, I'm
+            {{ $t('hero.greeting') }}
             <span class="gradient-text">Muhammad Ali Ghozi</span>
           </h1>
           
@@ -54,7 +54,7 @@
           >
             <span class="inline-flex items-center gap-2">
               <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              Junior Developer
+              {{ roleText }}<span class="typewriter-cursor"></span>
             </span>
           </h2>
           
@@ -62,8 +62,7 @@
             class="text-lg mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up delay-300"
             :class="isDark ? 'text-gray-400' : 'text-gray-600'"
           >
-            Passionate about creating beautiful and functional web applications. 
-            I love turning ideas into reality through clean code and creative solutions.
+            {{ $t('hero.description') }}
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up delay-400">
@@ -86,7 +85,7 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              Contact Me
+              {{ $t('hero.contactMe') }}
             </a>
           </div>
 
@@ -142,7 +141,7 @@
               :class="isDark ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'"
             >
               <span class="text-2xl mr-2">💻</span>
-              <span class="font-semibold">Developer</span>
+              <span class="font-semibold">{{ $t('hero.developer') }}</span>
             </div>
             
             <div 
@@ -151,7 +150,7 @@
               style="animation-delay: 0.5s;"
             >
               <span class="text-2xl mr-2">🚀</span>
-              <span class="font-semibold">Fast Learner</span>
+              <span class="font-semibold">{{ $t('hero.fastLearner') }}</span>
             </div>
           </div>
         </div>
@@ -171,8 +170,15 @@
 
 <script setup lang="ts">
 import { ref, inject, h, type Ref } from 'vue'
+import { useTypewriter } from '~/composables/useTypewriter'
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
+const { t } = useI18n()
+
+const { displayText: roleText } = useTypewriter(
+  ['Junior Developer', 'Web Developer', 'Vue.js Enthusiast', 'Laravel Developer'],
+  80, 40, 2000
+)
 
 const imageError = ref(false)
 

@@ -14,6 +14,8 @@
     <div class="section-divider"></div>
     <ProjectsSection />
     <div class="section-divider"></div>
+    <VisitorCounter />
+    <div class="section-divider"></div>
     <ContactSection />
     <FooterSection />
   </div>

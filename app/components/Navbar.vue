@@ -1,5 +1,5 @@
 <template>
-  <nav 
+  <nav
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="[
       isScrolled ? 'glass shadow-lg' : 'bg-transparent',
@@ -9,77 +9,92 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <NuxtLink 
-          to="#" 
+        <NuxtLink
+          to="#"
           class="text-xl md:text-2xl font-bold gradient-text flex items-center gap-2"
         >
-          <svg class="w-8 h-8" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" rx="8" fill="url(#logoGradient)"/>
-            <path d="M12 28V12L20 20L28 12V28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40">
-                <stop offset="0%" stop-color="#3b82f6"/>
-                <stop offset="100%" stop-color="#8b5cf6"/>
-              </linearGradient>
-            </defs>
-          </svg>
+          <HomeIcon class="w-8 h-8" />
           <span>Portfolio</span>
         </NuxtLink>
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
-          <a 
-            v-for="item in navItems" 
+          <div
+            v-for="item in navItems"
             :key="item.id"
-            :href="item.href" 
-            class="nav-link relative font-medium transition-colors duration-300 hover:text-primary-500"
-            :class="isDark ? 'hover:text-primary-400' : 'hover:text-primary-600'"
+            class="relative group"
           >
-            {{ item.label }}
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 hover:w-full"></span>
-          </a>
-          
+            <!-- Normal Link -->
+            <a
+              v-if="!item.children"
+              :href="item.href"
+              class="nav-link flex items-center gap-2 font-medium transition-colors duration-300"
+              :class="isDark ? 'hover:text-primary-400' : 'hover:text-primary-600'"
+            >
+              <component :is="item.icon" class="w-5 h-5" />
+              {{ item.label }}
+            </a>
+
+            <!-- Dropdown Trigger -->
+            <button
+              v-else
+              class="flex items-center gap-2 font-medium transition-colors duration-300"
+              :class="isDark ? 'hover:text-primary-400' : 'hover:text-primary-600'"
+            >
+              <component :is="item.icon" class="w-5 h-5" />
+              {{ item.label }}
+              <ChevronDownIcon class="w-4 h-4 mt-0.5" />
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute top-full left-0 mt-3 w-44 rounded-xl shadow-lg opacity-0 invisible
+                     group-hover:opacity-100 group-hover:visible transition-all duration-300 glass"
+            >
+              <a
+                v-for="child in item.children"
+                :key="child.href"
+                :href="child.href"
+                class="flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition
+                       hover:bg-black/10 dark:hover:bg-white/10"
+              >
+                <component :is="child.icon" class="w-4 h-4" />
+                {{ child.label }}
+              </a>
+            </div>
+          </div>
+
+          <!-- Language Switcher -->
+          <LanguageSwitcher />
+
           <!-- Dark Mode Toggle -->
-          <button 
+          <button
             @click="toggleDarkMode"
-            class="p-2 rounded-full transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-            :class="isDark ? 'bg-gray-800 text-yellow-400' : 'bg-gray-100 text-gray-600'"
+            class="p-2 rounded-full transition-all duration-300"
+            :class="isDark ? 'bg-gray-800' : 'bg-gray-100'"
           >
-            <svg v-if="isDark" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
-            </svg>
-            <svg v-else class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-            </svg>
+            <SunIcon v-if="isDark" class="w-5 h-5 text-yellow-400" />
+            <MoonIcon v-else class="w-5 h-5 text-gray-600" />
           </button>
         </div>
 
-        <!-- Mobile Menu Button -->
+        <!-- Mobile Buttons -->
         <div class="md:hidden flex items-center gap-3">
-          <button 
+          <LanguageSwitcher />
+          <button
             @click="toggleDarkMode"
-            class="p-2 rounded-full transition-all duration-300"
-            :class="isDark ? 'bg-gray-800 text-yellow-400' : 'bg-gray-100 text-gray-600'"
+            class="p-2 rounded-full"
+            :class="isDark ? 'bg-gray-800' : 'bg-gray-100'"
           >
-            <svg v-if="isDark" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
-            </svg>
-            <svg v-else class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-            </svg>
+            <SunIcon v-if="isDark" class="w-5 h-5 text-yellow-400" />
+            <MoonIcon v-else class="w-5 h-5 text-gray-600" />
           </button>
-          
-          <button 
+
+          <button
             @click="isMobileMenuOpen = !isMobileMenuOpen"
-            class="p-2 rounded-lg transition-colors duration-300"
-            :class="isDark ? 'text-white hover:bg-gray-800' : 'text-gray-800 hover:bg-gray-100'"
+            class="p-2 rounded-lg"
           >
-            <svg v-if="!isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-            <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
+            <Bars3Icon class="w-6 h-6" />
           </button>
         </div>
       </div>
@@ -94,22 +109,54 @@
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-4"
     >
-      <div 
+      <div
         v-if="isMobileMenuOpen"
         class="md:hidden glass border-t"
         :class="isDark ? 'border-gray-700' : 'border-gray-200'"
       >
-        <div class="px-4 py-4 space-y-3">
-          <a 
-            v-for="item in navItems" 
-            :key="item.id"
-            :href="item.href"
-            @click="isMobileMenuOpen = false"
-            class="block px-4 py-3 rounded-lg font-medium transition-all duration-300"
-            :class="isDark ? 'hover:bg-gray-800 text-white' : 'hover:bg-gray-100 text-gray-800'"
-          >
-            {{ item.label }}
-          </a>
+        <div class="px-4 py-4 space-y-2">
+          <div v-for="item in navItems" :key="item.id">
+            <!-- Normal -->
+            <a
+              v-if="!item.children"
+              :href="item.href"
+              @click="isMobileMenuOpen = false"
+              class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium"
+            >
+              <component :is="item.icon" class="w-5 h-5" />
+              {{ item.label }}
+            </a>
+
+            <!-- Dropdown -->
+            <div v-else>
+              <button
+                @click="openMobileDropdown = openMobileDropdown === item.id ? null : item.id"
+                class="w-full flex justify-between items-center px-4 py-3 rounded-lg font-medium"
+              >
+                <span class="flex items-center gap-2">
+                  <component :is="item.icon" class="w-5 h-5" />
+                  {{ item.label }}
+                </span>
+                <ChevronDownIcon class="w-4 h-4" />
+              </button>
+
+              <div
+                v-if="openMobileDropdown === item.id"
+                class="pl-6 mt-1 space-y-1"
+              >
+                <a
+                  v-for="child in item.children"
+                  :key="child.href"
+                  :href="child.href"
+                  @click="isMobileMenuOpen = false"
+                  class="flex items-center gap-2 px-4 py-2 text-sm rounded-lg"
+                >
+                  <component :is="child.icon" class="w-4 h-4" />
+                  {{ child.label }}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Transition>
@@ -117,40 +164,63 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, inject, type Ref } from 'vue'
+import { ref, computed, onMounted, onUnmounted, inject, type Ref } from 'vue'
+import {
+  HomeIcon,
+  UserIcon,
+  PuzzlePieceIcon,
+  CodeBracketIcon,
+  FolderIcon,
+  EnvelopeIcon,
+  ChevronDownIcon,
+  MoonIcon,
+  SunIcon,
+  Bars3Icon,
+} from '@heroicons/vue/24/outline'
 
 interface NavItem {
   id: number
   label: string
-  href: string
+  href?: string
+  icon?: any
+  children?: {
+    label: string
+    href: string
+    icon?: any
+  }[]
 }
 
-const navItems: NavItem[] = [
-  { id: 1, label: 'Home', href: '#home' },
-  { id: 2, label: 'About', href: '#about' },
-  { id: 3, label: 'Education', href: '#education' },
-  { id: 4, label: 'Skills', href: '#skills' },
-  { id: 5, label: 'Projects', href: '#projects' },
-  { id: 6, label: 'Contact', href: '#contact' }
-]
+const { t } = useI18n()
+
+const navItems = computed<NavItem[]>(() => [
+  { id: 1, label: t('nav.home'), href: '#home', icon: HomeIcon },
+  { id: 2, label: t('nav.about'), href: '#about', icon: UserIcon },
+  {
+    id: 3,
+    label: t('nav.games'),
+    icon: PuzzlePieceIcon,
+    children: [
+      { label: t('nav.chess'), href: '/chess/', icon: PuzzlePieceIcon },
+      { label: t('nav.snake'), href: '/snake/', icon: PuzzlePieceIcon },
+    ]
+  },
+  { id: 4, label: t('nav.skills'), href: '#skills', icon: CodeBracketIcon },
+  { id: 5, label: t('nav.projects'), href: '#projects', icon: FolderIcon },
+  { id: 6, label: t('nav.contact'), href: '#contact', icon: EnvelopeIcon }
+])
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
 const toggleDarkMode = inject<() => void>('toggleDarkMode', () => {})
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
+const openMobileDropdown = ref<number | null>(null)
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
 }
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  handleScroll()
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+onMounted(() => window.addEventListener('scroll', handleScroll))
+onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 </script>
 
 <style scoped>
@@ -164,7 +234,6 @@ onUnmounted(() => {
   background: linear-gradient(90deg, #3b82f6, #8b5cf6);
   transition: width 0.3s ease;
 }
-
 .nav-link:hover::after {
   width: 100%;
 }

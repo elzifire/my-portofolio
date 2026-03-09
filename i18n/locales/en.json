@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "games": "Games",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "chess": "Chess",
+    "snake": "Snake Game"
+  },
+  "hero": {
+    "welcome": "👋 Welcome to my portfolio",
+    "greeting": "Hi, I'm",
+    "role": "Junior Developer",
+    "description": "Passionate about creating beautiful and functional web applications. I love turning ideas into reality through clean code and creative solutions.",
+    "viewWork": "View My Work",
+    "contactMe": "Contact Me",
+    "developer": "Developer",
+    "fastLearner": "Fast Learner"
+  },
+  "about": {
+    "tagline": "Get to know me",
+    "title": "About",
+    "titleHighlight": "Me",
+    "subtitle": "A passionate Junior Developer based in Indonesia",
+    "p1": "Hello! I'm a junior developer with a strong passion for web development and technology. I enjoy creating beautiful, functional, and user-friendly websites and applications.",
+    "p2": "My journey in programming started with curiosity and has grown into a genuine love for solving problems through code. I'm constantly learning new technologies and improving my skills to become a better developer.",
+    "downloadCV": "Download CV",
+    "yearsLearning": "Years Learning",
+    "projectsCount": "Projects",
+    "name": "Name",
+    "location": "Location",
+    "email": "Email",
+    "status": "Status",
+    "availableForWork": "Available for work"
+  },
+  "education": {
+    "tagline": "My Journey",
+    "title": "Education",
+    "titleHighlight": "History"
+  },
+  "skills": {
+    "tagline": "What I can do",
+    "title": "My",
+    "titleHighlight": "Skillset",
+    "all": "All",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "devops": "DevOps & OS",
+    "tools": "Tools",
+    "technologies": "Technologies",
+    "categories": "Categories",
+    "passionToLearn": "Passion to Learn",
+    "alwaysLearning": "Always Learning"
+  },
+  "projects": {
+    "tagline": "My Work",
+    "title": "Featured",
+    "titleHighlight": "Projects",
+    "seeMore": "See More on GitHub",
+    "completed": "✓ Completed",
+    "inProgress": "⚡ In Progress"
+  },
+  "contact": {
+    "tagline": "Let's connect",
+    "title": "Get In",
+    "titleHighlight": "Touch",
+    "description": "Feel free to reach out to me for any opportunities, collaboration, or just to say hello!",
+    "emailTitle": "Email",
+    "emailSubtitle": "Send me a message anytime",
+    "locationTitle": "Location",
+    "locationSubtitle": "Based in",
+    "availabilityTitle": "Availability",
+    "availabilitySubtitle": "Current status",
+    "openForOpportunities": "Open for opportunities",
+    "followMe": "Follow me on social media",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your{'@'}email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What's this about?",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "sendMessage": "Send Message"
+  },
+  "footer": {
+    "description": "A passionate Junior Developer building beautiful and functional web experiences. Always learning, always growing.",
+    "quickLinks": "Quick Links",
+    "builtWith": "Built With",
+    "rights": "Portfolio. All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "visitor": {
+    "title": "Visitor",
+    "titleHighlight": "Counter",
+    "totalVisits": "Total Visits",
+    "tagline": "Live Stats"
+  }
+}

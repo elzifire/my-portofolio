@@ -17,20 +17,20 @@
           class="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4 animate-fade-in-up"
           :class="isDark ? 'bg-primary-500/20 text-primary-400' : 'bg-primary-100 text-primary-700'"
         >
-          Let's connect
+          {{ $t('contact.tagline') }}
         </span>
         <h2 
           class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up delay-100"
           :class="isDark ? 'text-white' : 'text-gray-900'"
         >
-          Get In <span class="gradient-text">Touch</span>
+          {{ $t('contact.title') }} <span class="gradient-text">{{ $t('contact.titleHighlight') }}</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
         <p 
           class="mt-6 text-lg max-w-2xl mx-auto animate-fade-in-up delay-200"
           :class="isDark ? 'text-gray-400' : 'text-gray-600'"
         >
-          Feel free to reach out to me for any opportunities, collaboration, or just to say hello!
+          {{ $t('contact.description') }}
         </p>
       </div>
 
@@ -41,8 +41,7 @@
           <div 
             v-for="(info, index) in contactInfo" 
             :key="info.title"
-            class="flex items-start gap-5 p-6 rounded-2xl card-hover transition-all duration-300"
-            :class="isDark ? 'bg-gray-700/50 hover:bg-gray-700' : 'bg-gray-50 hover:bg-white hover:shadow-lg'"
+            class="flex items-start gap-5 p-6 rounded-2xl glass-card card-3d transition-all duration-300"
             :style="{ animationDelay: `${index * 100}ms` }"
           >
             <div 
@@ -80,7 +79,7 @@
               class="font-bold text-lg mb-4"
               :class="isDark ? 'text-white' : 'text-gray-900'"
             >
-              Follow me on social media
+              {{ $t('contact.followMe') }}
             </h3>
             <div class="flex gap-3">
               <a 
@@ -117,13 +116,13 @@
                   class="block text-sm font-semibold mb-2"
                   :class="isDark ? 'text-gray-300' : 'text-gray-700'"
                 >
-                  Name
+                  {{ $t('contact.name') }}
                 </label>
                 <input 
                   id="name"
                   v-model="form.name"
                   type="text" 
-                  placeholder="Your name"
+                  :placeholder="$t('contact.namePlaceholder')"
                   class="w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none focus:ring-0"
                   :class="isDark 
                     ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500 focus:border-primary-500'
@@ -136,13 +135,13 @@
                   class="block text-sm font-semibold mb-2"
                   :class="isDark ? 'text-gray-300' : 'text-gray-700'"
                 >
-                  Email
+                  {{ $t('contact.email') }}
                 </label>
                 <input 
                   id="email"
                   v-model="form.email"
                   type="email" 
-                  placeholder="your@email.com"
+                  :placeholder="$t('contact.emailPlaceholder')"
                   class="w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none focus:ring-0"
                   :class="isDark 
                     ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500 focus:border-primary-500'
@@ -157,13 +156,13 @@
                 class="block text-sm font-semibold mb-2"
                 :class="isDark ? 'text-gray-300' : 'text-gray-700'"
               >
-                Subject
+                {{ $t('contact.subject') }}
               </label>
               <input 
                 id="subject"
                 v-model="form.subject"
                 type="text" 
-                placeholder="What's this about?"
+                :placeholder="$t('contact.subjectPlaceholder')"
                 class="w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none focus:ring-0"
                 :class="isDark 
                   ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500 focus:border-primary-500'
@@ -177,13 +176,13 @@
                 class="block text-sm font-semibold mb-2"
                 :class="isDark ? 'text-gray-300' : 'text-gray-700'"
               >
-                Message
+                {{ $t('contact.message') }}
               </label>
               <textarea 
                 id="message"
                 v-model="form.message"
                 rows="5" 
-                placeholder="Write your message here..."
+                :placeholder="$t('contact.messagePlaceholder')"
                 class="w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none focus:ring-0 resize-none"
                 :class="isDark 
                   ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500 focus:border-primary-500'
@@ -198,7 +197,7 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              Send Message
+              {{ $t('contact.sendMessage') }}
               <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
@@ -214,6 +213,7 @@
 import { ref, inject, reactive, type Ref } from 'vue'
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
+const { t } = useI18n()
 
 const form = reactive({
   name: '',
@@ -239,25 +239,25 @@ const handleSocialLeave = (event: Event) => {
 
 const contactInfo = [
   {
-    title: 'Email',
-    subtitle: 'Send me a message anytime',
+    title: t('contact.emailTitle'),
+    subtitle: t('contact.emailSubtitle'),
     value: 'zenscilla@gmail.com',
     link: 'mailto:zenscilla@gmail.com',
     color: '#3b82f6',
     icon: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>'
   },
   {
-    title: 'Location',
-    subtitle: 'Based in',
+    title: t('contact.locationTitle'),
+    subtitle: t('contact.locationSubtitle'),
     value: 'Indonesia',
     link: '#',
     color: '#8b5cf6',
     icon: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>'
   },
   {
-    title: 'Availability',
-    subtitle: 'Current status',
-    value: 'Open for opportunities',
+    title: t('contact.availabilityTitle'),
+    subtitle: t('contact.availabilitySubtitle'),
+    value: t('contact.openForOpportunities'),
     link: '#',
     color: '#10b981',
     icon: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'

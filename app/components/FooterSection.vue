@@ -24,14 +24,13 @@
             <span class="text-xl font-bold text-white">Portfolio</span>
           </div>
           <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-            A passionate Junior Developer building beautiful and functional web experiences. 
-            Always learning, always growing.
+            {{ $t('footer.description') }}
           </p>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+          <h3 class="text-white font-semibold mb-4">{{ $t('footer.quickLinks') }}</h3>
           <nav class="space-y-2">
             <a 
               v-for="link in quickLinks" 
@@ -46,7 +45,7 @@
 
         <!-- Tech Stack -->
         <div>
-          <h3 class="text-white font-semibold mb-4">Built With</h3>
+          <h3 class="text-white font-semibold mb-4">{{ $t('footer.builtWith') }}</h3>
           <div class="flex flex-wrap gap-2">
             <span 
               v-for="tech in builtWith" 
@@ -62,7 +61,7 @@
       <!-- Divider -->
       <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-gray-500 text-sm">
-          &copy; {{ currentYear }} Portfolio. All rights reserved.
+          &copy; {{ currentYear }} {{ $t('footer.rights') }}
         </p>
 
         <!-- Back to Top -->
@@ -70,7 +69,7 @@
           @click="scrollToTop"
           class="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors duration-300 text-sm group"
         >
-          Back to top
+          {{ $t('footer.backToTop') }}
           <svg class="w-4 h-4 transition-transform group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
           </svg>
@@ -84,16 +83,16 @@
 import { ref, inject, type Ref } from 'vue'
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
+const { t } = useI18n()
 
 const currentYear = new Date().getFullYear()
 
 const quickLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Education', href: '#education' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' }
+  { label: t('nav.home'), href: '#home' },
+  { label: t('nav.about'), href: '#about' },
+  { label: t('nav.skills'), href: '#skills' },
+  { label: t('nav.projects'), href: '#projects' },
+  { label: t('nav.contact'), href: '#contact' }
 ]
 
 const builtWith = ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'TypeScript']

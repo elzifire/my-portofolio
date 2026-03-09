@@ -23,13 +23,13 @@
           class="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4 animate-fade-in-up"
           :class="isDark ? 'bg-primary-500/20 text-primary-400' : 'bg-primary-100 text-primary-700'"
         >
-          Get to know me
+          {{ $t('about.tagline') }}
         </span>
         <h2 
           class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up delay-100"
           :class="isDark ? 'text-white' : 'text-gray-900'"
         >
-          About <span class="gradient-text">Me</span>
+          {{ $t('about.title') }} <span class="gradient-text">{{ $t('about.titleHighlight') }}</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
       </div>
@@ -75,7 +75,7 @@
                 </div>
                 <div>
                   <p class="text-2xl font-bold">1+</p>
-                  <p class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-600'">Years Learning</p>
+                  <p class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-600'">{{ $t('about.yearsLearning') }}</p>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@
                 </div>
                 <div>
                   <p class="text-2xl font-bold">5+</p>
-                  <p class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-600'">Projects</p>
+                  <p class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-600'">{{ $t('about.projectsCount') }}</p>
                 </div>
               </div>
             </div>
@@ -107,24 +107,21 @@
             class="text-2xl font-bold mb-6"
             :class="isDark ? 'text-white' : 'text-gray-900'"
           >
-            A passionate Junior Developer based in Indonesia
+            {{ $t('about.subtitle') }}
           </h3>
           
           <p 
             class="text-lg mb-6 leading-relaxed"
             :class="isDark ? 'text-gray-300' : 'text-gray-600'"
           >
-            Hello! I'm a junior developer with a strong passion for web development and technology. 
-            I enjoy creating beautiful, functional, and user-friendly websites and applications.
+            {{ $t('about.p1') }}
           </p>
           
           <p 
             class="text-lg mb-8 leading-relaxed"
             :class="isDark ? 'text-gray-300' : 'text-gray-600'"
           >
-            My journey in programming started with curiosity and has grown into a genuine love for 
-            solving problems through code. I'm constantly learning new technologies and improving 
-            my skills to become a better developer.
+            {{ $t('about.p2') }}
           </p>
 
           <!-- Info Cards -->
@@ -132,8 +129,7 @@
             <div 
               v-for="info in personalInfo" 
               :key="info.label"
-              class="p-4 rounded-xl transition-all duration-300 card-hover"
-              :class="isDark ? 'bg-gray-700/50' : 'bg-gray-50'"
+              class="p-4 rounded-xl transition-all duration-300 card-3d glass-card"
             >
               <div class="flex items-center gap-3">
                 <div 
@@ -152,13 +148,14 @@
 
           <!-- Download CV Button -->
           <a 
-            href="#" 
+            href="/CV -Muhammad Ali Ghozi.pdf" 
+            target="_blank"
             class="btn-primary px-8 py-4 rounded-full text-white font-semibold inline-flex items-center gap-2 group"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
-            Download CV
+            {{ $t('about.downloadCV') }}
             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
             </svg>
@@ -173,6 +170,7 @@
 import { ref, inject, h, type Ref } from 'vue'
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
+const { t } = useI18n()
 const imageError = ref(false)
 
 const handleImageError = () => {
@@ -198,9 +196,9 @@ const BriefcaseIcon = () => h('svg', { fill: 'none', stroke: 'currentColor', vie
 ])
 
 const personalInfo = [
-  { label: 'Name', value: 'Muhammad Ali Ghozi', icon: UserIcon },
-  { label: 'Location', value: 'Indonesia', icon: LocationIcon },
-  { label: 'Email', value: 'zenscilla@gmail.com' , icon: MailIcon },
-  { label: 'Status', value: 'Available for work', icon: BriefcaseIcon }
+  { label: t('about.name'), value: 'Muhammad Ali Ghozi', icon: UserIcon },
+  { label: t('about.location'), value: 'Indonesia', icon: LocationIcon },
+  { label: t('about.email'), value: 'zenscilla@gmail.com' , icon: MailIcon },
+  { label: t('about.status'), value: t('about.availableForWork'), icon: BriefcaseIcon }
 ]
 </script>

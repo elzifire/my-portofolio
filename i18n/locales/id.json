@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "games": "Permainan",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "contact": "Kontak",
+    "chess": "Catur",
+    "snake": "Game Ular"
+  },
+  "hero": {
+    "welcome": "👋 Selamat datang di portfolio saya",
+    "greeting": "Hai, Saya",
+    "role": "Junior Developer",
+    "description": "Suka membuat aplikasi web yang indah dan fungsional. Saya senang mengubah ide menjadi kenyataan melalui kode yang bersih dan solusi kreatif.",
+    "viewWork": "Lihat Karya Saya",
+    "contactMe": "Hubungi Saya",
+    "developer": "Developer",
+    "fastLearner": "Cepat Belajar"
+  },
+  "about": {
+    "tagline": "Kenali saya lebih dekat",
+    "title": "Tentang",
+    "titleHighlight": "Saya",
+    "subtitle": "Junior Developer yang bersemangat berbasis di Indonesia",
+    "p1": "Halo! Saya seorang junior developer dengan semangat tinggi untuk pengembangan web dan teknologi. Saya senang membuat website dan aplikasi yang indah, fungsional, dan ramah pengguna.",
+    "p2": "Perjalanan saya dalam pemrograman dimulai dari rasa ingin tahu dan telah tumbuh menjadi kecintaan yang tulus untuk memecahkan masalah melalui kode. Saya terus belajar teknologi baru dan meningkatkan keterampilan saya.",
+    "downloadCV": "Unduh CV",
+    "yearsLearning": "Tahun Belajar",
+    "projectsCount": "Proyek",
+    "name": "Nama",
+    "location": "Lokasi",
+    "email": "Email",
+    "status": "Status",
+    "availableForWork": "Tersedia untuk bekerja"
+  },
+  "education": {
+    "tagline": "Perjalanan Saya",
+    "title": "Riwayat",
+    "titleHighlight": "Pendidikan"
+  },
+  "skills": {
+    "tagline": "Yang bisa saya lakukan",
+    "title": "Keahlian",
+    "titleHighlight": "Saya",
+    "all": "Semua",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "devops": "DevOps & OS",
+    "tools": "Alat",
+    "technologies": "Teknologi",
+    "categories": "Kategori",
+    "passionToLearn": "Semangat Belajar",
+    "alwaysLearning": "Selalu Belajar"
+  },
+  "projects": {
+    "tagline": "Karya Saya",
+    "title": "Proyek",
+    "titleHighlight": "Unggulan",
+    "seeMore": "Lihat Selengkapnya di GitHub",
+    "completed": "✓ Selesai",
+    "inProgress": "⚡ Dalam Proses"
+  },
+  "contact": {
+    "tagline": "Mari terhubung",
+    "title": "Hubungi",
+    "titleHighlight": "Saya",
+    "description": "Jangan ragu untuk menghubungi saya untuk peluang, kolaborasi, atau sekadar menyapa!",
+    "emailTitle": "Email",
+    "emailSubtitle": "Kirim pesan kapan saja",
+    "locationTitle": "Lokasi",
+    "locationSubtitle": "Berbasis di",
+    "availabilityTitle": "Ketersediaan",
+    "availabilitySubtitle": "Status saat ini",
+    "openForOpportunities": "Terbuka untuk peluang",
+    "followMe": "Ikuti saya di media sosial",
+    "name": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "email": "Email",
+    "emailPlaceholder": "email{'@'}anda.com",
+    "subject": "Subjek",
+    "subjectPlaceholder": "Tentang apa?",
+    "message": "Pesan",
+    "messagePlaceholder": "Tulis pesan Anda di sini...",
+    "sendMessage": "Kirim Pesan"
+  },
+  "footer": {
+    "description": "Junior Developer yang antusias membangun pengalaman web yang indah dan fungsional. Selalu belajar, selalu berkembang.",
+    "quickLinks": "Tautan Cepat",
+    "builtWith": "Dibangun Dengan",
+    "rights": "Portfolio. Hak cipta dilindungi.",
+    "backToTop": "Kembali ke atas"
+  },
+  "visitor": {
+    "title": "Penghitung",
+    "titleHighlight": "Pengunjung",
+    "totalVisits": "Total Kunjungan",
+    "tagline": "Statistik Langsung"
+  }
+}
