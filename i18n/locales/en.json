@@ -240,8 +240,8 @@
       "desc": "Tap to fly through the pipes — how far can you go?"
     },
     "breakout": {
-      "name": "Breakout",
-      "desc": "Smash all the bricks with a bouncing ball and paddle!"
+      "name": "Breakout Adventure",
+      "desc": "10 themed levels with power-ups, combos & achievements!"
     }
   },
   "ttt": {
@@ -408,15 +408,56 @@
     "instructions": "Click, tap, or press Space / Arrow Up to flap"
   },
   "breakoutGame": {
-    "title": "Breakout",
-    "subtitle": "Move the paddle to bounce the ball and break all bricks",
+    "title": "Breakout Adventure",
+    "subtitle": "10 themed levels — power-ups, combos & achievements!",
     "score": "Score",
     "lives": "Lives",
     "level": "Level",
+    "combo": "Combo",
+    "time": "Time",
+    "maxCombo": "Max Combo",
     "gameOver": "Game Over!",
     "youWin": "You Win!",
+    "levelCleared": "Level Cleared!",
     "playAgain": "Play Again",
     "start": "Start Game",
-    "instructions": "Move mouse or touch to control the paddle. Arrow keys also work."
+    "play": "Play",
+    "back": "Back",
+    "retry": "Retry",
+    "nextLevel": "Next Level",
+    "toMap": "World Map",
+    "instructions": "Move mouse or touch to control the paddle. Arrow keys also work.",
+    "totalStars": "Stars",
+    "highestLevel": "Highest",
+    "bestScore": "Total Score",
+    "achievements": "Achievements",
+    "resetProgress": "Reset All Progress",
+    "resetConfirmTitle": "Reset Progress?",
+    "resetConfirmDesc": "This will erase all saved levels, stars, and achievements. This cannot be undone.",
+    "resetConfirmBtn": "Yes, Reset",
+    "cancel": "Cancel",
+    "starTargets": "Star Targets",
+    "clear": "Clear level",
+    "newAchievements": "New Achievements Unlocked!",
+    "achFirstClear": "First Blood",
+    "achFirstClearDesc": "Clear any level for the first time",
+    "achFiveLevels": "Explorer",
+    "achFiveLevelsDesc": "Clear 5 different levels",
+    "achAllLevels": "Conqueror",
+    "achAllLevelsDesc": "Clear all 10 levels",
+    "achNoMiss": "Untouchable",
+    "achNoMissDesc": "Clear a level without losing any life",
+    "achCombo10": "Combo Master",
+    "achCombo10Desc": "Reach a 10x combo",
+    "achCombo20": "Combo Legend",
+    "achCombo20Desc": "Reach a 20x combo",
+    "achSpeedDemon": "Speed Demon",
+    "achSpeedDemonDesc": "Clear a level in under 30 seconds",
+    "achStarCollector": "Star Collector",
+    "achStarCollectorDesc": "Collect 15 total stars",
+    "achPerfectStar": "Perfectionist",
+    "achPerfectStarDesc": "Earn 3 stars on any level",
+    "achPowerHunter": "Power Hunter",
+    "achPowerHunterDesc": "Collect 5 power-ups in a single level"
   }
 }

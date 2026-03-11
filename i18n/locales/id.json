@@ -240,8 +240,8 @@
       "desc": "Ketuk untuk terbang melewati pipa — seberapa jauh kamu bisa?"
     },
     "breakout": {
-      "name": "Breakout",
-      "desc": "Hancurkan semua bata dengan bola pantul dan pedal!"
+      "name": "Breakout Adventure",
+      "desc": "10 level bertema dengan power-up, kombo & pencapaian!"
     }
   },
   "ttt": {
@@ -408,15 +408,56 @@
     "instructions": "Klik, ketuk, atau tekan Spasi / Panah Atas untuk terbang"
   },
   "breakoutGame": {
-    "title": "Breakout",
-    "subtitle": "Gerakkan pedal untuk memantulkan bola dan hancurkan semua bata",
+    "title": "Breakout Adventure",
+    "subtitle": "10 level bertema — power-up, kombo & pencapaian!",
     "score": "Skor",
     "lives": "Nyawa",
     "level": "Level",
+    "combo": "Kombo",
+    "time": "Waktu",
+    "maxCombo": "Kombo Maks",
     "gameOver": "Game Selesai!",
     "youWin": "Kamu Menang!",
+    "levelCleared": "Level Selesai!",
     "playAgain": "Main Lagi",
     "start": "Mulai Game",
-    "instructions": "Gerakkan mouse atau sentuh untuk mengontrol pedal. Tombol panah juga bisa."
+    "play": "Main",
+    "back": "Kembali",
+    "retry": "Ulangi",
+    "nextLevel": "Level Berikutnya",
+    "toMap": "Peta Dunia",
+    "instructions": "Gerakkan mouse atau sentuh untuk mengontrol pedal. Tombol panah juga bisa.",
+    "totalStars": "Bintang",
+    "highestLevel": "Tertinggi",
+    "bestScore": "Total Skor",
+    "achievements": "Pencapaian",
+    "resetProgress": "Reset Semua Progres",
+    "resetConfirmTitle": "Reset Progres?",
+    "resetConfirmDesc": "Ini akan menghapus semua level, bintang, dan pencapaian yang tersimpan. Tidak bisa dibatalkan.",
+    "resetConfirmBtn": "Ya, Reset",
+    "cancel": "Batal",
+    "starTargets": "Target Bintang",
+    "clear": "Selesaikan level",
+    "newAchievements": "Pencapaian Baru Terbuka!",
+    "achFirstClear": "Pertama Kali",
+    "achFirstClearDesc": "Selesaikan level manapun untuk pertama kali",
+    "achFiveLevels": "Penjelajah",
+    "achFiveLevelsDesc": "Selesaikan 5 level berbeda",
+    "achAllLevels": "Penakluk",
+    "achAllLevelsDesc": "Selesaikan semua 10 level",
+    "achNoMiss": "Tak Tersentuh",
+    "achNoMissDesc": "Selesaikan level tanpa kehilangan nyawa",
+    "achCombo10": "Master Kombo",
+    "achCombo10Desc": "Capai kombo 10x",
+    "achCombo20": "Legenda Kombo",
+    "achCombo20Desc": "Capai kombo 20x",
+    "achSpeedDemon": "Kilat Cepat",
+    "achSpeedDemonDesc": "Selesaikan level dalam 30 detik",
+    "achStarCollector": "Kolektor Bintang",
+    "achStarCollectorDesc": "Kumpulkan 15 bintang total",
+    "achPerfectStar": "Perfeksionis",
+    "achPerfectStarDesc": "Dapatkan 3 bintang di level manapun",
+    "achPowerHunter": "Pemburu Power",
+    "achPowerHunterDesc": "Kumpulkan 5 power-up dalam satu level"
   }
 }
