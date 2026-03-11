@@ -36,7 +36,7 @@
               </svg>
             </div>
             <p class="text-3xl font-bold gradient-text">{{ currentTime }}</p>
-            <p class="text-sm mt-1" :class="isDark ? 'text-gray-400' : 'text-gray-600'">Local Time</p>
+            <p class="text-sm mt-1" :class="isDark ? 'text-gray-400' : 'text-gray-600'">{{ $t('visitor.localTime') }}</p>
           </div>
 
           <!-- Status -->
@@ -44,8 +44,8 @@
             <div class="w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center bg-green-500/20">
               <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
             </div>
-            <p class="text-3xl font-bold text-green-500">Online</p>
-            <p class="text-sm mt-1" :class="isDark ? 'text-gray-400' : 'text-gray-600'">Status</p>
+            <p class="text-3xl font-bold text-green-500">{{ $t('visitor.online') }}</p>
+            <p class="text-sm mt-1" :class="isDark ? 'text-gray-400' : 'text-gray-600'">{{ $t('visitor.status') }}</p>
           </div>
         </div>
       </div>

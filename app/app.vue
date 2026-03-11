@@ -1,6 +1,7 @@
 <template>
   <div :class="{ dark: isDark }">
     <NuxtPage />
+    <MusicPlayer />
   </div>
 </template>
 

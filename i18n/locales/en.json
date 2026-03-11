@@ -7,7 +7,14 @@
     "projects": "Projects",
     "contact": "Contact",
     "chess": "Chess",
-    "snake": "Snake Game"
+    "snake": "Snake Game",
+    "ludo": "Ludo",
+    "tictactoe": "Tic Tac Toe",
+    "memory": "Memory Game",
+    "2048": "2048",
+    "wordle": "Wordle",
+    "minesweeper": "Minesweeper",
+    "typingtest": "Typing Speed"
   },
   "hero": {
     "welcome": "👋 Welcome to my portfolio",
@@ -17,7 +24,13 @@
     "viewWork": "View My Work",
     "contactMe": "Contact Me",
     "developer": "Developer",
-    "fastLearner": "Fast Learner"
+    "fastLearner": "Fast Learner",
+    "roles": {
+      "junior": "Junior Developer",
+      "web": "Web Developer",
+      "vue": "Vue.js Enthusiast",
+      "laravel": "Laravel Developer"
+    }
   },
   "about": {
     "tagline": "Get to know me",
@@ -38,7 +51,15 @@
   "education": {
     "tagline": "My Journey",
     "title": "Education",
-    "titleHighlight": "History"
+    "titleHighlight": "History",
+    "items": {
+      "uika": {
+        "year": "2021 - 2025",
+        "institution": "UNIVERSITAS IBN KHALDUN BOGOR",
+        "degree": "Bachelor of Computer Science",
+        "description": "Focused on software engineering and web development. Graduated with honors. Active member of the programming community."
+      }
+    }
   },
   "skills": {
     "tagline": "What I can do",
@@ -53,7 +74,12 @@
     "technologies": "Technologies",
     "categories": "Categories",
     "passionToLearn": "Passion to Learn",
-    "alwaysLearning": "Always Learning"
+    "alwaysLearning": "Always Learning",
+    "levels": {
+      "advanced": "Advanced",
+      "intermediate": "Intermediate",
+      "beginner": "Beginner"
+    }
   },
   "projects": {
     "tagline": "My Work",
@@ -61,7 +87,45 @@
     "titleHighlight": "Projects",
     "seeMore": "See More on GitHub",
     "completed": "✓ Completed",
-    "inProgress": "⚡ In Progress"
+    "inProgress": "⚡ In Progress",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "fullstack": "Fullstack",
+      "frontend": "Frontend"
+    },
+    "items": {
+      "masjid": {
+        "title": "MASJID IBN KHALDUN BOGOR",
+        "description": "A comprehensive mosque management system with event scheduling, donation tracking, and community engagement features.",
+        "type": "Full Stack"
+      },
+      "portfolio": {
+        "title": "Portfolio Website",
+        "description": "Modern portfolio website with dark mode, smooth animations, responsive design built with Nuxt.js and Tailwind CSS.",
+        "type": "Frontend"
+      },
+      "akps": {
+        "title": "Akses Kelola Perhutanan Sosial",
+        "description": "A web-based application for managing social forestry access, including tracking news, permit applications, and real-time monitoring.",
+        "type": "Full Stack"
+      },
+      "complain": {
+        "title": "Complain Management System",
+        "description": "A web application for managing customer complaints with ticketing system, status tracking, and admin dashboard for analytics.",
+        "type": "Full Stack"
+      },
+      "landing": {
+        "title": "Landing Page Company",
+        "description": "Responsive company landing page with modern design, smooth scroll animations, and contact form integration.",
+        "type": "Frontend"
+      },
+      "setoran": {
+        "title": "Setoran Hafalan Al-Qur'an",
+        "description": "A web application for managing Quran memorization records, allowing users to track progress, set goals, and receive feedback from teachers.",
+        "type": "Full Stack"
+      }
+    }
   },
   "contact": {
     "tagline": "Let's connect",
@@ -97,6 +161,262 @@
     "title": "Visitor",
     "titleHighlight": "Counter",
     "totalVisits": "Total Visits",
-    "tagline": "Live Stats"
+    "tagline": "Live Stats",
+    "localTime": "Local Time",
+    "online": "Online",
+    "status": "Status"
+  },
+  "music": {
+    "title": "Music Player"
+  },
+  "games": {
+    "title": "Game Arcade",
+    "subtitle": "Take a break and play some fun games!",
+    "backToPortfolio": "Back to Portfolio",
+    "backToGames": "Back to Games",
+    "tags": {
+      "strategy": "Strategy",
+      "ai": "AI",
+      "multiplayer": "Multiplayer",
+      "arcade": "Arcade",
+      "classic": "Classic",
+      "board": "Board",
+      "puzzle": "Puzzle",
+      "brain": "Brain",
+      "word": "Word",
+      "skill": "Skill",
+      "speed": "Speed"
+    },
+    "chess": {
+      "name": "Chess",
+      "desc": "Classic chess with AI opponent — test your strategic thinking."
+    },
+    "snake": {
+      "name": "Snake",
+      "desc": "Eat food, grow longer, don't hit the walls or yourself!"
+    },
+    "ludo": {
+      "name": "Ludo",
+      "desc": "Roll the dice, race your pieces home in this board classic."
+    },
+    "tictactoe": {
+      "name": "Tic Tac Toe",
+      "desc": "Play against a friend or challenge the unbeatable AI bot."
+    },
+    "memory": {
+      "name": "Memory Match",
+      "desc": "Flip cards and find matching pairs — train your memory!"
+    },
+    "g2048": {
+      "name": "2048",
+      "desc": "Slide and merge tiles to reach the elusive 2048 number."
+    },
+    "wordle": {
+      "name": "Wordle",
+      "desc": "Guess the hidden 5-letter word in 6 attempts."
+    },
+    "minesweeper": {
+      "name": "Minesweeper",
+      "desc": "Uncover the board without detonating any hidden mines."
+    },
+    "typingtest": {
+      "name": "Typing Speed",
+      "desc": "Test how fast and accurately you can type."
+    },
+    "colorguess": {
+      "name": "Color Guess",
+      "desc": "Can you identify a color from its hex code? Test your eye!"
+    },
+    "reactiontime": {
+      "name": "Reaction Time",
+      "desc": "How fast are your reflexes? Click as soon as it turns green!"
+    },
+    "sudoku": {
+      "name": "Sudoku",
+      "desc": "Fill the 9×9 grid so every row, column, and box contains 1–9."
+    },
+    "flappybird": {
+      "name": "Flappy Bird",
+      "desc": "Tap to fly through the pipes — how far can you go?"
+    },
+    "breakout": {
+      "name": "Breakout",
+      "desc": "Smash all the bricks with a bouncing ball and paddle!"
+    }
+  },
+  "ttt": {
+    "back": "Back to Games",
+    "title": "Tic Tac Toe",
+    "subtitle": "Classic strategy game — beat the bot!",
+    "chooseMode": "Choose Game Mode",
+    "pvp": "Player vs Player",
+    "easyBot": "Easy Bot",
+    "hardBot": "Hard Bot",
+    "player1": "Player 1",
+    "player2": "Player 2",
+    "you": "You",
+    "bot": "Bot",
+    "draw": "Draw",
+    "itsDraw": "It's a Draw!",
+    "wins": "Wins!",
+    "botThinking": "Bot is thinking...",
+    "turn": "'s Turn",
+    "newRound": "New Round",
+    "changeMode": "Change Mode"
+  },
+  "memoryGame": {
+    "back": "Back to Games",
+    "title": "Memory Match",
+    "subtitle": "Flip cards and find matching pairs!",
+    "chooseDifficulty": "Choose Difficulty",
+    "easy": "Easy (4×3)",
+    "medium": "Medium (4×4)",
+    "hard": "Hard (5×4)",
+    "moves": "Moves",
+    "pairs": "Pairs",
+    "time": "Time",
+    "level": "Level",
+    "congratulations": "Congratulations!",
+    "foundAll": "You found all {pairs} pairs in {moves} moves and {time}!",
+    "newBest": "New Best Score!",
+    "bestLabel": "Best ({difficulty}): {moves} moves in {time}",
+    "restart": "Restart",
+    "changeDifficulty": "Change Difficulty"
+  },
+  "game2048": {
+    "back": "Back to Games",
+    "title": "2048",
+    "subtitle": "Slide tiles, merge numbers, reach 2048!",
+    "score": "Score",
+    "best": "Best",
+    "youWin": "You Win!",
+    "gameOver": "Game Over!",
+    "newGame": "New Game",
+    "hint": "Use arrow keys or swipe to move tiles"
+  },
+  "wordleGame": {
+    "back": "Back to Games",
+    "title": "Wordle",
+    "subtitle": "Guess the 5-letter word in 6 tries!",
+    "newWord": "New Word",
+    "notEnough": "Not enough letters",
+    "notInList": "Not in word list",
+    "brilliant": "Brilliant!",
+    "theWordWas": "The word was: {word}"
+  },
+  "mineGame": {
+    "back": "Back to Games",
+    "title": "Minesweeper",
+    "subtitle": "Find all mines without detonating them!",
+    "chooseDifficulty": "Choose Difficulty",
+    "easy": "Easy (9×9, 10 mines)",
+    "medium": "Medium (12×12, 25)",
+    "hard": "Hard (16×12, 45)",
+    "mines": "Mines",
+    "time": "Time",
+    "status": "Status",
+    "playing": "playing",
+    "youWin": "You Win!",
+    "gameOver": "Game Over!",
+    "restart": "Restart",
+    "changeDifficulty": "Change Difficulty",
+    "hint": "Left-click: reveal · Right-click / long-press: flag"
+  },
+  "typingGame": {
+    "back": "Back to Games",
+    "title": "Typing Speed",
+    "subtitle": "Test how fast and accurately you can type!",
+    "chooseDuration": "Choose Duration",
+    "sec15": "15 seconds",
+    "sec30": "30 seconds",
+    "sec60": "60 seconds",
+    "seconds": "Seconds",
+    "wpm": "WPM",
+    "accuracy": "Accuracy",
+    "clickHere": "Click here",
+    "ifNotWorking": "if typing isn't working",
+    "correct": "Correct",
+    "errors": "Errors",
+    "characters": "Characters",
+    "tryAgain": "Try Again",
+    "changeDuration": "Change Duration"
+  },
+  "colorguess": {
+    "title": "Color Guess",
+    "subtitle": "Guess which color matches the hex code!",
+    "score": "Score",
+    "round": "Round",
+    "streak": "Streak",
+    "whatColor": "What color is this hex code?",
+    "correct": "Correct! 🎉",
+    "wrong": "Wrong! ❌",
+    "gameOver": "Game Over!",
+    "finalScore": "You scored {score}/{total}",
+    "playAgain": "Play Again"
+  },
+  "reaction": {
+    "title": "Reaction Time",
+    "subtitle": "How fast are your reflexes?",
+    "bestTime": "Best",
+    "clickToStart": "Click to Start",
+    "getReady": "Test your reaction speed!",
+    "waitForGreen": "Wait for green...",
+    "clickNow": "CLICK NOW!",
+    "tooEarly": "Too early!",
+    "clickToRetry": "Click to try again",
+    "history": "Recent Results",
+    "average": "Average",
+    "incredible": "Incredible! 🚀",
+    "fast": "Fast! ⚡",
+    "averageLabel": "Average 👍",
+    "slow": "Keep practicing 🐢"
+  },
+  "snakeGame": {
+    "back": "Back to Games",
+    "title": "Snake Game",
+    "subtitle": "Use arrow keys or WASD to control",
+    "score": "Score",
+    "highScore": "High Score",
+    "gameOver": "Game Over!",
+    "playAgain": "Play Again",
+    "pressSpace": "Press Space to Start",
+    "controls": "Arrow keys or WASD to move"
+  },
+  "sudokuGame": {
+    "title": "Sudoku",
+    "subtitle": "Fill the grid — every row, column & box needs 1–9",
+    "chooseDifficulty": "Choose Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "mistakes": "Mistakes",
+    "time": "Time",
+    "level": "Level",
+    "youWin": "Puzzle Solved!",
+    "tooManyMistakes": "Too Many Mistakes!",
+    "restart": "Restart",
+    "changeDifficulty": "Change Difficulty"
+  },
+  "flappyBirdGame": {
+    "title": "Flappy Bird",
+    "subtitle": "Tap or press Space to fly — avoid the pipes!",
+    "score": "Score",
+    "best": "Best",
+    "gameOver": "Game Over!",
+    "playAgain": "Play Again",
+    "tapToStart": "Tap to Start",
+    "instructions": "Click, tap, or press Space / Arrow Up to flap"
+  },
+  "breakoutGame": {
+    "title": "Breakout",
+    "subtitle": "Move the paddle to bounce the ball and break all bricks",
+    "score": "Score",
+    "lives": "Lives",
+    "level": "Level",
+    "gameOver": "Game Over!",
+    "youWin": "You Win!",
+    "playAgain": "Play Again",
+    "start": "Start Game",
+    "instructions": "Move mouse or touch to control the paddle. Arrow keys also work."
   }
 }

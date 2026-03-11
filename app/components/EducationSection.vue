@@ -151,7 +151,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, inject, type Ref } from 'vue'
+import { ref, inject, computed, type Ref } from 'vue'
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
 const { t } = useI18n()
@@ -164,27 +164,13 @@ interface Education {
   description: string
 }
 
-const educationData: Education[] = [
+const educationData = computed(() => [
   {
     id: 1,
-    year: '2021 - 2025',
-    institution: 'UNIVERSITAS IBN KHALDUN BOGOR',
-    degree: 'Bachelor of Computer Science',
-    description: 'Focused on software engineering and web development. Graduated with honors. Active member of the programming community.'
+    year: t('education.items.uika.year'),
+    institution: t('education.items.uika.institution'),
+    degree: t('education.items.uika.degree'),
+    description: t('education.items.uika.description')
   },
-  // {
-  //   id: 2,
-  //   year: '2017 - 2020',
-  //   institution: 'Senior High School',
-  //   degree: 'Science Major',
-  //   description: 'Specialized in mathematics and computer science. Participated in various programming competitions.'
-  // },
-  // {
-  //   id: 3,
-  //   year: '2014 - 2017',
-  //   institution: 'Junior High School',
-  //   degree: 'General Education',
-  //   description: 'Started learning basic programming and discovered passion for technology.'
-  // }
-]
+])
 </script>

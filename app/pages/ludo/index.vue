@@ -4,6 +4,9 @@
 
       <!-- Header -->
       <div class="text-center mb-6">
+        <NuxtLink to="/games" class="inline-block mb-4 text-gray-400 hover:text-white transition-colors text-sm">
+          &larr; {{ $t('games.backToGames') }}
+        </NuxtLink>
         <h1 class="text-4xl font-bold text-white mb-1 flex items-center justify-center gap-3">
           <span class="text-3xl">🎲</span> Ludo Game
         </h1>

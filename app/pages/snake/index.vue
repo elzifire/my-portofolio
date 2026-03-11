@@ -4,22 +4,22 @@
     
     <!-- Back Button -->
     <div class="fixed top-4 left-4 z-50">
-      <NuxtLink to="/"
+      <NuxtLink to="/games"
         class="glass-card px-4 py-2 rounded-full font-medium inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
         :class="isDark ? 'text-white hover:text-primary-400' : 'text-gray-800 hover:text-primary-600'">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
-        Back
+        {{ $t('games.backToGames') }}
       </NuxtLink>
     </div>
 
     <div class="max-w-4xl mx-auto px-4 py-20">
       <div class="text-center mb-8">
         <h1 class="text-4xl font-bold mb-2">
-          🐍 <span class="gradient-text">Snake Game</span>
+          🐍 <span class="gradient-text">{{ $t('snakeGame.title') }}</span>
         </h1>
-        <p :class="isDark ? 'text-gray-400' : 'text-gray-600'">Use arrow keys or WASD to control</p>
+        <p :class="isDark ? 'text-gray-400' : 'text-gray-600'">{{ $t('snakeGame.subtitle') }}</p>
       </div>
 
       <!-- Game Container -->
@@ -27,11 +27,11 @@
         <!-- Score -->
         <div class="flex justify-between items-center mb-6">
           <div class="glass-card px-4 py-2 rounded-xl">
-            <span class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-500'">Score</span>
+            <span class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-500'">{{ $t('snakeGame.score') }}</span>
             <p class="text-2xl font-bold gradient-text">{{ score }}</p>
           </div>
           <div class="glass-card px-4 py-2 rounded-xl">
-            <span class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-500'">High Score</span>
+            <span class="text-sm" :class="isDark ? 'text-gray-400' : 'text-gray-500'">{{ $t('snakeGame.highScore') }}</span>
             <p class="text-2xl font-bold gradient-text">{{ highScore }}</p>
           </div>
         </div>
@@ -87,11 +87,11 @@
           <div v-if="gameOver"
             class="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-30">
             <div class="text-center">
-              <p class="text-3xl font-bold text-white mb-2">Game Over!</p>
-              <p class="text-gray-300 mb-4">Score: {{ score }}</p>
+              <p class="text-3xl font-bold text-white mb-2">{{ $t('snakeGame.gameOver') }}</p>
+              <p class="text-gray-300 mb-4">{{ $t('snakeGame.score') }}: {{ score }}</p>
               <button @click="resetGame"
                 class="btn-primary px-6 py-3 rounded-full text-white font-semibold">
-                Play Again
+                {{ $t('snakeGame.playAgain') }}
               </button>
             </div>
           </div>
@@ -100,8 +100,8 @@
           <div v-if="!gameStarted && !gameOver"
             class="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-30">
             <div class="text-center">
-              <p class="text-2xl font-bold text-white mb-4">Press Space to Start</p>
-              <p class="text-gray-300 text-sm">Arrow keys or WASD to move</p>
+              <p class="text-2xl font-bold text-white mb-4">{{ $t('snakeGame.pressSpace') }}</p>
+              <p class="text-gray-300 text-sm">{{ $t('snakeGame.controls') }}</p>
             </div>
           </div>
         </div>

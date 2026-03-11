@@ -70,7 +70,7 @@
               href="#projects" 
               class="btn-primary px-8 py-4 rounded-full text-white font-semibold inline-flex items-center justify-center gap-2 group"
             >
-              View My Work
+              {{ $t('hero.viewWork') }}
               <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
@@ -123,6 +123,7 @@
               <img 
                 src="~/assets/images/my-photo2.png" 
                 alt="Profile Photo" 
+                loading="lazy"
                 class="w-full h-full object-cover rounded-full"
                 @error="handleImageError"
               />
@@ -169,14 +170,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref, inject, h, type Ref } from 'vue'
+import { ref, inject, computed, h, type Ref } from 'vue'
 import { useTypewriter } from '~/composables/useTypewriter'
 
 const isDark = inject<Ref<boolean>>('isDark', ref(false))
 const { t } = useI18n()
 
+const roles = computed(() => [
+  t('hero.roles.junior'),
+  t('hero.roles.web'),
+  t('hero.roles.vue'),
+  t('hero.roles.laravel')
+])
+
 const { displayText: roleText } = useTypewriter(
-  ['Junior Developer', 'Web Developer', 'Vue.js Enthusiast', 'Laravel Developer'],
+  roles.value,
   80, 40, 2000
 )
 

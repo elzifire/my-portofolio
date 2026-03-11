@@ -46,6 +46,7 @@
               <img 
                 src="~/assets/images/my-photo.png" 
                 alt="About Me" 
+                loading="lazy"
                 class="w-full h-auto object-cover"
                 @error="handleImageError"
               />

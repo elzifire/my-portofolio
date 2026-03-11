@@ -7,7 +7,14 @@
     "projects": "Proyek",
     "contact": "Kontak",
     "chess": "Catur",
-    "snake": "Game Ular"
+    "snake": "Game Ular",
+    "ludo": "Ludo",
+    "tictactoe": "Tic Tac Toe",
+    "memory": "Game Memori",
+    "2048": "2048",
+    "wordle": "Wordle",
+    "minesweeper": "Ranjau",
+    "typingtest": "Tes Mengetik"
   },
   "hero": {
     "welcome": "👋 Selamat datang di portfolio saya",
@@ -17,7 +24,13 @@
     "viewWork": "Lihat Karya Saya",
     "contactMe": "Hubungi Saya",
     "developer": "Developer",
-    "fastLearner": "Cepat Belajar"
+    "fastLearner": "Cepat Belajar",
+    "roles": {
+      "junior": "Junior Developer",
+      "web": "Web Developer",
+      "vue": "Penggemar Vue.js",
+      "laravel": "Laravel Developer"
+    }
   },
   "about": {
     "tagline": "Kenali saya lebih dekat",
@@ -38,7 +51,15 @@
   "education": {
     "tagline": "Perjalanan Saya",
     "title": "Riwayat",
-    "titleHighlight": "Pendidikan"
+    "titleHighlight": "Pendidikan",
+    "items": {
+      "uika": {
+        "year": "2021 - 2025",
+        "institution": "UNIVERSITAS IBN KHALDUN BOGOR",
+        "degree": "Sarjana Ilmu Komputer",
+        "description": "Fokus pada rekayasa perangkat lunak dan pengembangan web. Lulus dengan predikat terpuji. Anggota aktif komunitas pemrograman."
+      }
+    }
   },
   "skills": {
     "tagline": "Yang bisa saya lakukan",
@@ -53,7 +74,12 @@
     "technologies": "Teknologi",
     "categories": "Kategori",
     "passionToLearn": "Semangat Belajar",
-    "alwaysLearning": "Selalu Belajar"
+    "alwaysLearning": "Selalu Belajar",
+    "levels": {
+      "advanced": "Mahir",
+      "intermediate": "Menengah",
+      "beginner": "Pemula"
+    }
   },
   "projects": {
     "tagline": "Karya Saya",
@@ -61,7 +87,45 @@
     "titleHighlight": "Unggulan",
     "seeMore": "Lihat Selengkapnya di GitHub",
     "completed": "✓ Selesai",
-    "inProgress": "⚡ Dalam Proses"
+    "inProgress": "⚡ Dalam Proses",
+    "filters": {
+      "all": "Semua",
+      "web": "Web",
+      "fullstack": "Fullstack",
+      "frontend": "Frontend"
+    },
+    "items": {
+      "masjid": {
+        "title": "MASJID IBN KHALDUN BOGOR",
+        "description": "Sistem manajemen masjid yang komprehensif dengan penjadwalan acara, pelacakan donasi, dan fitur keterlibatan komunitas.",
+        "type": "Full Stack"
+      },
+      "portfolio": {
+        "title": "Website Portfolio",
+        "description": "Website portfolio modern dengan mode gelap, animasi halus, desain responsif yang dibangun dengan Nuxt.js dan Tailwind CSS.",
+        "type": "Frontend"
+      },
+      "akps": {
+        "title": "Akses Kelola Perhutanan Sosial",
+        "description": "Aplikasi berbasis web untuk mengelola akses kehutanan sosial, termasuk pelacakan berita, permohonan izin, dan pemantauan real-time.",
+        "type": "Full Stack"
+      },
+      "complain": {
+        "title": "Sistem Manajemen Pengaduan",
+        "description": "Aplikasi web untuk mengelola pengaduan pelanggan dengan sistem tiket, pelacakan status, dan dasbor admin untuk analitik.",
+        "type": "Full Stack"
+      },
+      "landing": {
+        "title": "Landing Page Perusahaan",
+        "description": "Landing page perusahaan yang responsif dengan desain modern, animasi scroll halus, dan integrasi formulir kontak.",
+        "type": "Frontend"
+      },
+      "setoran": {
+        "title": "Setoran Hafalan Al-Qur'an",
+        "description": "Aplikasi web untuk mengelola catatan hafalan Al-Qur'an, memungkinkan pengguna melacak progres, menetapkan target, dan menerima umpan balik dari guru.",
+        "type": "Full Stack"
+      }
+    }
   },
   "contact": {
     "tagline": "Mari terhubung",
@@ -97,6 +161,262 @@
     "title": "Penghitung",
     "titleHighlight": "Pengunjung",
     "totalVisits": "Total Kunjungan",
-    "tagline": "Statistik Langsung"
+    "tagline": "Statistik Langsung",
+    "localTime": "Waktu Lokal",
+    "online": "Online",
+    "status": "Status"
+  },
+  "music": {
+    "title": "Pemutar Musik"
+  },
+  "games": {
+    "title": "Arcade Game",
+    "subtitle": "Istirahat sejenak dan mainkan game seru!",
+    "backToPortfolio": "Kembali ke Portfolio",
+    "backToGames": "Kembali ke Games",
+    "tags": {
+      "strategy": "Strategi",
+      "ai": "AI",
+      "multiplayer": "Multipemain",
+      "arcade": "Arcade",
+      "classic": "Klasik",
+      "board": "Papan",
+      "puzzle": "Puzzle",
+      "brain": "Otak",
+      "word": "Kata",
+      "skill": "Keahlian",
+      "speed": "Kecepatan"
+    },
+    "chess": {
+      "name": "Catur",
+      "desc": "Catur klasik dengan lawan AI — uji kecerdasan strategismu."
+    },
+    "snake": {
+      "name": "Ular",
+      "desc": "Makan makanan, tumbuh lebih panjang, jangan tabrak dinding!"
+    },
+    "ludo": {
+      "name": "Ludo",
+      "desc": "Lempar dadu, balapkan bidakmu ke rumah dalam game papan klasik."
+    },
+    "tictactoe": {
+      "name": "Tic Tac Toe",
+      "desc": "Bermain melawan teman atau tantang bot AI yang tak terkalahkan."
+    },
+    "memory": {
+      "name": "Game Memori",
+      "desc": "Balik kartu dan temukan pasangan yang cocok — latih ingatanmu!"
+    },
+    "g2048": {
+      "name": "2048",
+      "desc": "Geser dan gabungkan ubin untuk mencapai angka 2048."
+    },
+    "wordle": {
+      "name": "Wordle",
+      "desc": "Tebak kata 5 huruf tersembunyi dalam 6 percobaan."
+    },
+    "minesweeper": {
+      "name": "Ranjau",
+      "desc": "Buka papan tanpa meledakkan ranjau tersembunyi."
+    },
+    "typingtest": {
+      "name": "Tes Mengetik",
+      "desc": "Uji seberapa cepat dan akurat kamu mengetik."
+    },
+    "colorguess": {
+      "name": "Tebak Warna",
+      "desc": "Bisakah kamu mengenali warna dari kode hex-nya?"
+    },
+    "reactiontime": {
+      "name": "Waktu Reaksi",
+      "desc": "Seberapa cepat refleksmu? Klik saat berubah hijau!"
+    },
+    "sudoku": {
+      "name": "Sudoku",
+      "desc": "Isi grid 9×9 agar setiap baris, kolom, dan kotak berisi 1–9."
+    },
+    "flappybird": {
+      "name": "Flappy Bird",
+      "desc": "Ketuk untuk terbang melewati pipa — seberapa jauh kamu bisa?"
+    },
+    "breakout": {
+      "name": "Breakout",
+      "desc": "Hancurkan semua bata dengan bola pantul dan pedal!"
+    }
+  },
+  "ttt": {
+    "back": "Kembali ke Games",
+    "title": "Tic Tac Toe",
+    "subtitle": "Game strategi klasik — kalahkan bot!",
+    "chooseMode": "Pilih Mode Game",
+    "pvp": "Pemain vs Pemain",
+    "easyBot": "Bot Mudah",
+    "hardBot": "Bot Sulit",
+    "player1": "Pemain 1",
+    "player2": "Pemain 2",
+    "you": "Kamu",
+    "bot": "Bot",
+    "draw": "Seri",
+    "itsDraw": "Hasilnya Seri!",
+    "wins": "Menang!",
+    "botThinking": "Bot sedang berpikir...",
+    "turn": " Giliran",
+    "newRound": "Ronde Baru",
+    "changeMode": "Ganti Mode"
+  },
+  "memoryGame": {
+    "back": "Kembali ke Games",
+    "title": "Game Memori",
+    "subtitle": "Balik kartu dan temukan pasangan!",
+    "chooseDifficulty": "Pilih Kesulitan",
+    "easy": "Mudah (4×3)",
+    "medium": "Sedang (4×4)",
+    "hard": "Sulit (5×4)",
+    "moves": "Langkah",
+    "pairs": "Pasangan",
+    "time": "Waktu",
+    "level": "Level",
+    "congratulations": "Selamat!",
+    "foundAll": "Kamu menemukan semua {pairs} pasangan dalam {moves} langkah dan {time}!",
+    "newBest": "Skor Terbaik Baru!",
+    "bestLabel": "Terbaik ({difficulty}): {moves} langkah dalam {time}",
+    "restart": "Mulai Ulang",
+    "changeDifficulty": "Ganti Kesulitan"
+  },
+  "game2048": {
+    "back": "Kembali ke Games",
+    "title": "2048",
+    "subtitle": "Geser ubin, gabungkan angka, capai 2048!",
+    "score": "Skor",
+    "best": "Terbaik",
+    "youWin": "Kamu Menang!",
+    "gameOver": "Game Selesai!",
+    "newGame": "Game Baru",
+    "hint": "Gunakan tombol panah atau geser untuk memindahkan ubin"
+  },
+  "wordleGame": {
+    "back": "Kembali ke Games",
+    "title": "Wordle",
+    "subtitle": "Tebak kata 5 huruf dalam 6 percobaan!",
+    "newWord": "Kata Baru",
+    "notEnough": "Huruf belum cukup",
+    "notInList": "Tidak ada di daftar kata",
+    "brilliant": "Luar Biasa!",
+    "theWordWas": "Katanya adalah: {word}"
+  },
+  "mineGame": {
+    "back": "Kembali ke Games",
+    "title": "Ranjau",
+    "subtitle": "Temukan semua ranjau tanpa meledakkannya!",
+    "chooseDifficulty": "Pilih Kesulitan",
+    "easy": "Mudah (9×9, 10 ranjau)",
+    "medium": "Sedang (12×12, 25)",
+    "hard": "Sulit (16×12, 45)",
+    "mines": "Ranjau",
+    "time": "Waktu",
+    "status": "Status",
+    "playing": "bermain",
+    "youWin": "Kamu Menang!",
+    "gameOver": "Game Selesai!",
+    "restart": "Mulai Ulang",
+    "changeDifficulty": "Ganti Kesulitan",
+    "hint": "Klik kiri: buka · Klik kanan / tekan lama: tandai"
+  },
+  "typingGame": {
+    "back": "Kembali ke Games",
+    "title": "Tes Mengetik",
+    "subtitle": "Uji seberapa cepat dan akurat kamu mengetik!",
+    "chooseDuration": "Pilih Durasi",
+    "sec15": "15 detik",
+    "sec30": "30 detik",
+    "sec60": "60 detik",
+    "seconds": "Detik",
+    "wpm": "KPM",
+    "accuracy": "Akurasi",
+    "clickHere": "Klik di sini",
+    "ifNotWorking": "jika mengetik tidak berfungsi",
+    "correct": "Benar",
+    "errors": "Salah",
+    "characters": "Karakter",
+    "tryAgain": "Coba Lagi",
+    "changeDuration": "Ganti Durasi"
+  },
+  "colorguess": {
+    "title": "Tebak Warna",
+    "subtitle": "Tebak warna mana yang cocok dengan kode hex!",
+    "score": "Skor",
+    "round": "Ronde",
+    "streak": "Beruntun",
+    "whatColor": "Warna apa dari kode hex ini?",
+    "correct": "Benar! 🎉",
+    "wrong": "Salah! ❌",
+    "gameOver": "Game Selesai!",
+    "finalScore": "Skor kamu {score}/{total}",
+    "playAgain": "Main Lagi"
+  },
+  "reaction": {
+    "title": "Waktu Reaksi",
+    "subtitle": "Seberapa cepat refleksmu?",
+    "bestTime": "Terbaik",
+    "clickToStart": "Klik untuk Mulai",
+    "getReady": "Uji kecepatan reaksimu!",
+    "waitForGreen": "Tunggu sampai hijau...",
+    "clickNow": "KLIK SEKARANG!",
+    "tooEarly": "Terlalu cepat!",
+    "clickToRetry": "Klik untuk coba lagi",
+    "history": "Hasil Terakhir",
+    "average": "Rata-rata",
+    "incredible": "Luar Biasa! 🚀",
+    "fast": "Cepat! ⚡",
+    "averageLabel": "Rata-rata 👍",
+    "slow": "Terus berlatih 🐢"
+  },
+  "snakeGame": {
+    "back": "Kembali ke Games",
+    "title": "Game Ular",
+    "subtitle": "Gunakan tombol panah atau WASD untuk kontrol",
+    "score": "Skor",
+    "highScore": "Skor Tertinggi",
+    "gameOver": "Game Selesai!",
+    "playAgain": "Main Lagi",
+    "pressSpace": "Tekan Spasi untuk Mulai",
+    "controls": "Tombol panah atau WASD untuk bergerak"
+  },
+  "sudokuGame": {
+    "title": "Sudoku",
+    "subtitle": "Isi grid — setiap baris, kolom & kotak butuh 1–9",
+    "chooseDifficulty": "Pilih Tingkat Kesulitan",
+    "easy": "Mudah",
+    "medium": "Sedang",
+    "hard": "Sulit",
+    "mistakes": "Kesalahan",
+    "time": "Waktu",
+    "level": "Level",
+    "youWin": "Puzzle Terpecahkan!",
+    "tooManyMistakes": "Terlalu Banyak Kesalahan!",
+    "restart": "Mulai Ulang",
+    "changeDifficulty": "Ubah Kesulitan"
+  },
+  "flappyBirdGame": {
+    "title": "Flappy Bird",
+    "subtitle": "Ketuk atau tekan Spasi untuk terbang — hindari pipa!",
+    "score": "Skor",
+    "best": "Terbaik",
+    "gameOver": "Game Selesai!",
+    "playAgain": "Main Lagi",
+    "tapToStart": "Ketuk untuk Mulai",
+    "instructions": "Klik, ketuk, atau tekan Spasi / Panah Atas untuk terbang"
+  },
+  "breakoutGame": {
+    "title": "Breakout",
+    "subtitle": "Gerakkan pedal untuk memantulkan bola dan hancurkan semua bata",
+    "score": "Skor",
+    "lives": "Nyawa",
+    "level": "Level",
+    "gameOver": "Game Selesai!",
+    "youWin": "Kamu Menang!",
+    "playAgain": "Main Lagi",
+    "start": "Mulai Game",
+    "instructions": "Gerakkan mouse atau sentuh untuk mengontrol pedal. Tombol panah juga bisa."
   }
 }

@@ -145,7 +145,7 @@
                 class="text-xs mt-1 block font-medium"
                 :class="isDark ? 'text-gray-400' : 'text-gray-500'"
               >
-                {{ skill.levelLabel }}
+                {{ getLevelLabel(skill.levelLabel) }}
               </span>
             </div>
           </div>
@@ -214,38 +214,38 @@ interface Category {
   icon: string;
 }
 
-const categories: Category[] = [
+const categories = computed<Category[]>(() => [
   {
     id: "all",
-    label: "All",
+    label: t('skills.all'),
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
   },
   {
     id: "frontend",
-    label: "Frontend",
+    label: t('skills.frontend'),
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
   },
   {
     id: "backend",
-    label: "Backend",
+    label: t('skills.backend'),
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
   },
   {
     id: "database",
-    label: "Database",
+    label: t('skills.database'),
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5"/><path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"/></svg>',
   },
   {
     id: "devops",
-    label: "DevOps & OS",
+    label: t('skills.devops'),
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
   },
   {
     id: "tools",
-    label: "Tools",
+    label: t('skills.tools'),
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
   },
-];
+]);
 
 const skills: Skill[] = [
   // Frontend
@@ -432,28 +432,33 @@ const skills: Skill[] = [
   }
 ];
 
-const stats = [
+const stats = computed(() => [
   {
     value: "13+",
-    label: "Technologies",
+    label: t('skills.technologies'),
     icon: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>',
   },
   {
     value: "4",
-    label: "Categories",
+    label: t('skills.categories'),
     icon: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>',
   },
   {
     value: "∞",
-    label: "Passion to Learn",
+    label: t('skills.passionToLearn'),
     icon: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>',
   },
   {
     value: "24/7",
-    label: "Always Learning",
+    label: t('skills.alwaysLearning'),
     icon: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
   },
-];
+]);
+
+const getLevelLabel = (label: string) => {
+  const key = label.toLowerCase() as 'advanced' | 'intermediate' | 'beginner'
+  return t(`skills.levels.${key}`)
+}
 
 const filteredSkills = computed(() => {
   if (activeCategory.value === "all") return skills;

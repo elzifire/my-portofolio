@@ -25,15 +25,15 @@
             class="relative group"
           >
             <!-- Normal Link -->
-            <a
-              v-if="!item.children"
-              :href="item.href"
-              class="nav-link flex items-center gap-2 font-medium transition-colors duration-300"
-              :class="isDark ? 'hover:text-primary-400' : 'hover:text-primary-600'"
-            >
-              <component :is="item.icon" class="w-5 h-5" />
-              {{ item.label }}
-            </a>
+            <NuxtLink
+  v-if="!item.children"
+  :to="item.href"
+  class="nav-link flex items-center gap-2 font-medium transition-colors duration-300"
+  :class="isDark ? 'hover:text-primary-400' : 'hover:text-primary-600'"
+>
+  <component :is="item.icon" class="w-5 h-5" />
+  {{ item.label }}
+</NuxtLink>
 
             <!-- Dropdown Trigger -->
             <button
@@ -117,15 +117,15 @@
         <div class="px-4 py-4 space-y-2">
           <div v-for="item in navItems" :key="item.id">
             <!-- Normal -->
-            <a
+            <NuxtLink
               v-if="!item.children"
-              :href="item.href"
+              :to="item.href"
               @click="isMobileMenuOpen = false"
               class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium"
             >
               <component :is="item.icon" class="w-5 h-5" />
               {{ item.label }}
-            </a>
+            </NuxtLink>
 
             <!-- Dropdown -->
             <div v-else>
@@ -198,11 +198,8 @@ const navItems = computed<NavItem[]>(() => [
   {
     id: 3,
     label: t('nav.games'),
+    href: '/games',
     icon: PuzzlePieceIcon,
-    children: [
-      { label: t('nav.chess'), href: '/chess/', icon: PuzzlePieceIcon },
-      { label: t('nav.snake'), href: '/snake/', icon: PuzzlePieceIcon },
-    ]
   },
   { id: 4, label: t('nav.skills'), href: '#skills', icon: CodeBracketIcon },
   { id: 5, label: t('nav.projects'), href: '#projects', icon: FolderIcon },
